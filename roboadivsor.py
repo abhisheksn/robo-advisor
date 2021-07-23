@@ -1,9 +1,8 @@
-#roboadvisor.py
 import os
-import requests
 from dotenv import load_dotenv  # source:https://github.com/theskumar/python-dotenv
-import json
 from datetime import datetime
+import requests
+import json
 
 load_dotenv()
 
@@ -50,15 +49,15 @@ recent_high=max(high_prices)
 recent_low=min(high_prices)
 
 print("-------------------------")
-print("SELECTED SYMBOL: XYZ")
+print("SELECTED SYMBOL:", symbol)
 print("-------------------------")
 print("REQUESTING STOCK MARKET DATA...")
-print(f"REQUEST AT: {dt_string}")
+print("REQUEST AT:", dt_string)
 print("-------------------------")
-print(f"LATEST DAY: {latest_day}")
-print(f"LATEST CLOSE: {latest_close}")
-print(f"RECENT HIGH: {recent_high}")
-print(f"RECENT LOW: {recent_low}")
+print("LATEST DAY:", latest_day)
+print("LATEST CLOSE:", to_usd(float(latest_close)))
+print("RECENT HIGH:", to_usd(float(recent_high)))
+print("RECENT LOW:", to_usd(float(recent_low)))
 print("-------------------------")
 #print("RECOMMENDATION: BUY!")
 #print("RECOMMENDATION REASON:")
