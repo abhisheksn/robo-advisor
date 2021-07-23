@@ -22,7 +22,8 @@ symbol = input("Please input the Stock symbol:")
 
 #Alter the tax rate by creating a .env file
 # source:https://github.com/theskumar/python-dotenv
-API = os.getenv("API_KEY")
+
+api_key = os.getenv("API_KEY")
 
 STOCK_URL = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&apikey={api_key}"
 
